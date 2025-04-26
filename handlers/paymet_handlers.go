@@ -40,6 +40,7 @@ func GetPaymentStatusHandler(w http.ResponseWriter, r *http.Request) {
 	payment, exists := store.Payments[id]
 	if !exists {
 		http.Error(w, "Payment not found", http.StatusNotFound)
+		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
