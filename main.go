@@ -12,7 +12,7 @@ func main() {
 	r := router.SetupRouter()
 
 	// Start the server
-	port := ":8080"
+	port := ":8081"
 	fmt.Println("Server running at http://localhost" + port)
 	log.Fatal(http.ListenAndServe(port, r))
 }
